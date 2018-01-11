@@ -55,7 +55,7 @@ void setup(){
   pinMode(ledPin2, OUTPUT);
   pinMode(ledPin3, OUTPUT);
 
-  Serial.println(); Serial.println("Initializing SPIFFS card...");
+  Serial.println(); Serial.println("Initializing SPIFFS ...");
 
   if (!SPIFFS.begin()) {
     Serial.println("SPIFFS failed, or not present");
