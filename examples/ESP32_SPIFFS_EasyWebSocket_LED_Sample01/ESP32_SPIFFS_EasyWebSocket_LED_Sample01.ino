@@ -114,6 +114,12 @@ void loop() {
             case '_':
               LED_PWM(2, 0, floor(ws_data/2));
               break;
+            case 'A':
+              LED_PWM(3, 0, ws_data);
+              break;
+            case 'O':
+              LED_PWM(4, 0, ws_data);
+              break;
           }
         }else if(ret_str[0] == 't'){
           txt = ret_str.substring(ret_str.indexOf('|')+1, ret_str.length()-1);
@@ -214,6 +220,10 @@ void websocket_handshake(){
 
     html_str2 += ews.EWS_TextBox_Send("txt1", "Hello Easy WebSocket Beta1.60","送信");
     html_str2 += "<br><br>\r\n";
+    html_str2 += "LED \r\n";
+    html_str2 += ews.EWS_On_Momentary_Button("ALL", "ALL-ON", 80,25,15,"#000000","#AAAAAA");
+    html_str2 += ews.EWS_On_Momentary_Button("OUT", "ALL-OFF", 80,25,15,"#FFFFFF","#555555");
+    html_str2 += "<br>\r\n";
 
     html_str3 += "<br>LED BLUE Dim\r\n";
     html_str3 += ews.EWS_Canvas_Slider_T("BLUE",200,40,"#777777","#0000ff"); //CanvasスライダーはString文字列に２つまでしか入らない
