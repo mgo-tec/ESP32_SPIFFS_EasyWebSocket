@@ -983,6 +983,7 @@ String ESP32_SPIFFS_EasyWebSocket::EWS_OnOff_Button(String button_id, uint16_t w
   str += f_color;
   str += "; background-color:";
   str += b_color;
+  str += ";' >\r\n";
 
   return str;
 }
