@@ -1,6 +1,6 @@
 /*
   ESP32_SPIFFS_EasyWebSocket.cpp - WebSocket for ESP-WROOM-32 ( ESP32 & SPIFFS card use)
-  Beta version 1.60
+  Beta version 1.61
 
 Copyright (c) 2018 Mgo-tec
 This library improvement collaborator is Mr.Visyeii.
@@ -1474,4 +1474,23 @@ void ESP32_SPIFFS_EasyWebSocket::sha1( String str_data, uint8_t hash[20] ){
   mbedtls_sha1_starts(&ctx);
   mbedtls_sha1_update(&ctx, data, str_data.length());
   mbedtls_sha1_finish(&ctx, hash);
+}
+//*****************************************
+uint8_t ESP32_SPIFFS_EasyWebSocket::WebSocket_Status(){
+  return _WS_on;
+}
+//**************************************************************
+String ESP32_SPIFFS_EasyWebSocket::Color_Picker(uint16_t top_px, uint16_t left_px, String default_col, String ID){
+  String str = "";
+
+  str += "<div style='position: relative; top:";
+  str += String(top_px);
+  str += "px; left:";
+  str += String(left_px);
+  str += "px; width:50px; height:0px'>\r\n";
+  str += "<input type='color' value='" + default_col + "' id='" + ID +"' ";
+  str += "onchange='Color_Picker_Send(100, \"" + ID + "\", this.value);'>\r\n";
+  str += "</div>\r\n";
+
+  return str;
 }

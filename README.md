@@ -1,4 +1,4 @@
-# ESP32_SPIFFS_EasyWebSocket BETA 1.60
+# ESP32_SPIFFS_EasyWebSocket BETA 1.61
 Simple library for WebSocket communication with ESP-WROOM-32(ESP32) and smartphone browser.  
 This requires the Arduino core for ESP32 library.  
 https://github.com/espressif/arduino-esp32  
@@ -6,6 +6,10 @@ This use SPIFFS file system.
 
 My Blog: https://www.mgo-tec.com
 # Change log:
+(1.61)  
+- WebSocket_Status function addition.  
+- Added Color_Picker function.  
+  
 (1.60)  
 New Release.
 Since ESP32_SD_EasyWebSocket Beta ver 1.51.1 has been improved for SPIFFS, the new release version is Beta ver 1.60.  
@@ -13,6 +17,10 @@ In the WebSocket handshake, I used the MbedTLS library in Arduino-ESP32 without 
   
   
 # 【更新履歴】(Japanese)
+(1.61)  
+- WebSocket_Status関数追加  
+- Color_Picker関数追加  
+  
 (1.60)  
 新規リリース。  
 ESP32_SD_EasyWebSocket Beta ver 1.51.1 をSPIFFS用に改良したものなので、New Release バージョンは Beta ver 1.60 とします。  

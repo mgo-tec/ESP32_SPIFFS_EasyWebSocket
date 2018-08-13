@@ -1,6 +1,6 @@
 /*
   ESP32_SPIFFS_EasyWebSocket.h - WebSocket for ESP-WROOM-32 ( ESP32 & SPIFFS card use)
-  Beta version 1.60
+  Beta version 1.61
 
 Copyright (c) 2018 Mgo-tec
 This library improvement collaborator is Mr.Visyeii.
@@ -98,6 +98,8 @@ public:
   bool HTTP_SPIFFS_Pic_Send(const char* Serv, const char* dir);
   void Favicon_Response(String str, uint8_t ws, uint8_t ini_htm, uint8_t up_f);
   void sha1( String data, uint8_t hash[20] );
+  uint8_t WebSocket_Status();
+  String Color_Picker(uint16_t top_px, uint16_t left_px, String default_col, String ID);
 
 private:
   const char *_ssid;
